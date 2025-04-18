@@ -71,25 +71,14 @@ else:
         if word and word[0].isupper() and not word.isupper():
             capital_letter = capital_letter + 1
     
-
-    
-    
         if word.isupper():
             all_capital_letter = all_capital_letter + 1
-    
-    
     
         if word.islower():
             small_letter = small_letter + 1
     
-       
-    
-    
         if word.isnumeric():
             number = number + 1
-    
-
-    
     
         if word.isnumeric():
             sum_number = sum_number + int(word)
@@ -102,8 +91,8 @@ else:
 
     clear_words = []
     for word in words:
-        strip_clear_words = word.strip(",.:;'!?")
-        clear_words.append(strip_clear_words)
+        cleaned_words = word.strip(",.:;'!?")
+        clear_words.append(cleaned_words)
         length_word = [len(word) for word in clear_words]
         length_count = {}
         for length in length_word:
