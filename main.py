@@ -93,13 +93,14 @@ else:
     for word in words:
         cleaned_words = word.strip(",.:;'!?")
         clear_words.append(cleaned_words)
-        length_word = [len(word) for word in clear_words]
-        length_count = {}
-        for length in length_word:
-            if length in length_count:
-                length_count[length] = length_count[length] + 1
-            else:
-                length_count[length] = 1
+
+    length_word = [len(word) for word in clear_words]
+    length_count = {}
+    for length in length_word:
+        if length in length_count:
+            length_count[length] = length_count[length] + 1
+        else:
+            length_count[length] = 1
     print(f"{separator}\n{"LEN".center(3)} | {"OCCURENCES".center(18)} | {"NR.".center(3)}\n{separator}")
     for length, count in sorted(length_count.items()):
         stars = "*" * count
