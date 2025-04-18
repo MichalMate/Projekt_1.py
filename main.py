@@ -55,45 +55,42 @@ print(separator)
 if not selection.isdigit() or not (1 <= int(selection) <= len(TEXTS)):
     print(f"There is no text for this number: {selection}, terminating the program.")
     quit()
-
-
-    
-    
-
 else:
     count = (len(TEXTS[int(selection) - 1].split())) 
-    index = int(selection) - 1
-
-    
-        
+    index = int(selection) - 1   
     print(f"There are {count} words in the selected text.")
 
     words = (TEXTS[int(selection) - 1].split())
     capital_letter = 0
+    all_capital_letter = 0
+    small_letter = 0
+    number = 0
+    sum_number = 0
+
     for word in words:
         if word and word[0].isupper() and not word.isupper():
             capital_letter = capital_letter + 1
     print(f"There are {capital_letter} titlecase words.")
 
-    all_capital_letter = 0
+    
     for word in words:
         if word.isupper():
             all_capital_letter = all_capital_letter + 1
     print(f"There are {all_capital_letter} uppercase words.")
 
-    small_letter = 0
+    
     for word in words:
         if word.islower():
             small_letter = small_letter + 1
     print(f"There are {small_letter} lowercase words.")
        
-    number = 0
+    
     for word in words:
         if word.isnumeric():
             number = number + 1
     print(f"There are {number} numeric string.")
 
-    sum_number = 0
+    
     for word in words:
         if word.isnumeric():
             sum_number = sum_number + int(word)
