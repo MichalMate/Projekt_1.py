@@ -53,7 +53,7 @@ selection = input(f"Enter a number btw. 1 and {len(TEXTS)} to select: ")
 print(separator)
 
 if not selection.isdigit() or not (1 <= int(selection) <= len(TEXTS)):
-    print(f"There is no text for this number: {int(selection)}, terminating the program.")
+    print(f"There is no text for this number: {selection}, terminating the program.")
     quit()
 
 elif selection.isalpha():
