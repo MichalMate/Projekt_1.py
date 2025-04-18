@@ -56,9 +56,9 @@ if not selection.isdigit() or not (1 <= int(selection) <= len(TEXTS)):
     print(f"There is no text for this number: {selection}, terminating the program.")
     quit()
 
-elif selection.isalpha():
-    print(f"You must enter a number. You entered: {selection}, terminating the program.")
-    quit()
+
+    
+    
 
 else:
     # selection.isdigit() and 1 <= int(selection) <= len(TEXTS)
