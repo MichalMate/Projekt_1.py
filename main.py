@@ -52,7 +52,7 @@ print(separator)
 selection = input(f"Enter a number btw. 1 and {len(TEXTS)} to select: ")
 print(separator)
 
-if selection.isdigit() and (int(selection) == 0 or int(selection) > len(TEXTS)):
+if not selection.isdigit() or not (1 <= int(selection) <= len(TEXTS)):
     print(f"There is no text for this number: {int(selection)}, terminating the program.")
     quit()
 
