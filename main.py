@@ -64,7 +64,7 @@ else:
     count = (len(TEXTS[int(selection) - 1].split())) 
     index = int(selection) - 1
 
-    if 0 <= index < len(TEXTS):
+    
         
     print(f"There are {count} words in the selected text.")
 
