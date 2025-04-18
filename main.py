@@ -36,7 +36,7 @@ name = input("Please enter your username\n")
 password = input("Please enter your password\n")
 separator = "-" * 40
 
-if name in users.keys() and password in users.values():
+if users.get(name) == password:
     message = (f"username: {name}\npassword: {password}")
     print(f"{message}")
 else:
@@ -61,7 +61,7 @@ elif selection.isalpha():
     quit()
 
 else:
-    selection.isdigit() and 1 <= int(selection) <= len(TEXTS)
+    # selection.isdigit() and 1 <= int(selection) <= len(TEXTS)
     index = int(selection) - 1
 
     if 0 <= index < len(TEXTS):
