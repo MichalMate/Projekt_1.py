@@ -73,25 +73,25 @@ else:
     print(f"There are {capital_letter} titlecase words.")
 
     
-    for word in words:
+    
         if word.isupper():
             all_capital_letter = all_capital_letter + 1
     print(f"There are {all_capital_letter} uppercase words.")
 
     
-    for word in words:
+    
         if word.islower():
             small_letter = small_letter + 1
     print(f"There are {small_letter} lowercase words.")
        
     
-    for word in words:
+    
         if word.isnumeric():
             number = number + 1
     print(f"There are {number} numeric string.")
 
     
-    for word in words:
+    
         if word.isnumeric():
             sum_number = sum_number + int(word)
     print(f"The sum of all the numbers {sum_number}.")
