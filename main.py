@@ -61,11 +61,11 @@ if not selection.isdigit() or not (1 <= int(selection) <= len(TEXTS)):
     
 
 else:
-    # selection.isdigit() and 1 <= int(selection) <= len(TEXTS)
+    count = (len(TEXTS[int(selection) - 1].split())) 
     index = int(selection) - 1
 
     if 0 <= index < len(TEXTS):
-        count = (len(TEXTS[int(selection) - 1].split()))
+        
     print(f"There are {count} words in the selected text.")
 
     words = (TEXTS[int(selection) - 1].split())
